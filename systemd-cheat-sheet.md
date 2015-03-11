@@ -8,7 +8,8 @@ Short synopsis is:
 * general command syntax is `systemctl verb noun` 
 
 	for example:
-	```systemctl enable foo
+	```
+	systemctl enable foo
 	```
 
 CentOS7 in general supports the old format 'service' command as a compatibility measure, calling 'systemctl' appropriately.
