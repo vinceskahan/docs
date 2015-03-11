@@ -45,6 +45,7 @@ The resulting tree had ‘many’ old branches that had never been deleted, as w
 1. deleted any branches that had been fully merged
 2. deleted any branches that had a tag at the last unmerged checkin
 3. added a tag at the end of each branch with unmerged checkins, and 'then' deleted the branch
+
 Result was what was hoped for – a clean git tree with just active branches on it, and tags for all past releases and unmerged branches that had names good enough to figure out what was on them (for someday in the distant future perhaps).
 
 ## Import into github
