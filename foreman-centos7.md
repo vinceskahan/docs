@@ -1,7 +1,7 @@
 
 # Installing "The Foreman" under Centos7
 
-Nothing too tricky in this one – follow The Foreman 1.7 [http://www.theforeman.org/manuals/1.7/index.html#2.Quickstart](quickstart) guide section 2
+Nothing too tricky in this one – follow The Foreman 1.7 [quickstart](http://www.theforeman.org/manuals/1.7/index.html#2.Quickstart) guide section 2
 
 
 ## Install CentOS-7 on the Foreman server
