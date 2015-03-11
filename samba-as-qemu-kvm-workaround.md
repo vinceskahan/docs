@@ -67,7 +67,7 @@ Default selinux policy will block the client from seeing anything you export unl
 ### get selinux out of the way
 `setsebool -P samba_export_all_rw 1`
 
-This is explained further in the [RHEL Documentation](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/sect-Managing_Confined_Services-Samba-Booleans.html)!.
+This is explained further in the [RHEL Documentation](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/sect-Managing_Confined_Services-Samba-Booleans.html).
 
     samba_export_all_rw
     Export any file or directory, allowing read and write permissions. This allows files and directories that are not labeled with the samba_share_t type to be exported through Samba. Permissions in /etc/samba/smb.conf and Linux permissions must be configured to allow write access.
