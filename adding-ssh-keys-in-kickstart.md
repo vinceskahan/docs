@@ -7,8 +7,10 @@ Note - centos7 uses *authorized_keys*, not *authorized_keys2*, in its default *s
 ## Example
 
 ```%post
-### Install our SSH key
+
+#---- Install our SSH key ----
 mkdir -m0700 /root/.ssh/
+
 cat <<EOF >/root/.ssh/authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVmQ5REEZM
 nCfznsDgE0ak+oiv1e9sdH6xxGvFhkTlcT7AJonluxPrtskU
@@ -19,8 +21,10 @@ xxaMFkYBrU67uXATnXeiPUtwO7XjIgnuTotXtdZkLmUi9Pm1
 by2+pVeXJlSgx9qevsZ/16DeAizYIas7aTz+X61ICRqS0EAR
 pHlm2LXxU4voc4WgIPxKl2MLzDJupqa7IAvbO9WVZFwR vince@VinceAir.local
 EOF
+
 ### set permissions
 chmod 0600 /root/.ssh/authorized_keys
+
 ### fix up selinux context
 restorecon -R /root/.ssh/
 
