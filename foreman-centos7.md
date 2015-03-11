@@ -10,7 +10,7 @@ It is simplest to do a server installation with gui, but a minimum server would 
 
 * set the system up with a static address and a FQDN
 * ensure DNS resolution works ok
-* run*sysctl set-hostname* before the foreman-installer would work (see note below)
+* run *sysctl set-hostname* to ensure the foreman-installer would work (see note below)
 * take the reboot at the end, accept terms, normal sequence applies
 
 ## Install The Foreman
@@ -38,7 +38,7 @@ Transcript should indicate:
 
 ##Test the Foreman server
 
-* on the server, connect to http://localhost and reset your admin password
+* on the server, connect to *http://localhost* and reset your admin password
 * save it in your browser if desired
 
 ### Set the server itself as a puppet/foreman client for the *ntp* service
@@ -70,12 +70,12 @@ next set your hostname (FQDN) to use the ntp class we just updated
 
 at this point you should see:
     
-    * the run succeeded (foreman gui)
+    * the run succeeded in the foreman gui
     * the /etc/ntp.conf file should have a comment in it saying ‘managed by puppet’.
 
 to re-verify
 
-    * alter ntp.conf
+    * alter ntp.conf manually
     * run ‘puppet agent –test’ again
     * re-verify it put the content back to the puppet-managed content of the file
 
