@@ -96,4 +96,4 @@ on a debian system, you will see lots of whining ala:
     See http://links.puppetlabs.com/env-settings-deprecations
      (at /usr/lib/ruby/vendor_ruby/puppet/settings.rb:1139:in `issue_deprecation_warning')
 
-The workaround is to manually comment out the templatedir entry in */etc/puppet/puppet.conf *– see [PUP-2566](https://tickets.puppetlabs.com/browse/PUP–2566) for details
+The workaround is to manually comment out the templatedir entry in */etc/puppet/puppet.conf*– see [PUP-2566](https://tickets.puppetlabs.com/browse/PUP–2566) for details
