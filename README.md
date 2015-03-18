@@ -6,6 +6,7 @@ This repo contains some howtos and technical notes that either document things t
 * [foreman](files/foreman/)
 * [git](files/git)
 * [kickstart](files/kickstart/)
+* [lvm](files/lvm/)
 * [puppet](files/puppet/)
 * [qemu](files/qemu/)
 * [systemd](files/systemd/)
