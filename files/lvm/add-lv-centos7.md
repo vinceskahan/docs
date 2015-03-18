@@ -30,7 +30,7 @@ Use 'parted' to create a partition named 'sdaPart2' using all of the free space 
     Information: You may need to update /etc/fstab.
     
 
-Notice that that parted aligned the partitions optimally, so there is a little free space unused as a result.
+Notice that parted aligned the partitions optimally, so there is a little free space unused as a result.
     
     root@nuc ~ $ parted /dev/sda print free
     Model: ATA WDC WD10JFCX-68N (scsi)
@@ -74,17 +74,20 @@ Again, verify it worked:
     
 ## Create the volume group, containing the LVM physical volume we just created
 
+The disk is a Western Digital Red, so lets call it "wdRed"
+
     root@nuc ~ $ vgcreate wdRed /dev/sda2
       Volume group "wdRed" successfully created
 
 ## Next, use a portion of the volume group and create a logical volume
 
+Again, it's logical volume 1 in that volume group, so name it wdRedLV1 for lack of a better idea
     
     root@nuc ~ $ lvcreate --name wdRedLV1 --size 110GB wdRed
       Logical volume "wdRedLV1" created
 
 
-And format the logical volume as xfs
+And format the logical volume as xfs:
 
     root@nuc ~ $ mkfs.xfs /dev/wdRed/wdRedLV1
     meta-data=/dev/wdRed/wdRedLV1    isize=256    agcount=4, agsize=7208960 blks
