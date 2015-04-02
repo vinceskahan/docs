@@ -25,7 +25,7 @@ yum install -y foreman-installer
 foreman-installer
 ```
  
-note: one possible stumbling block is that the server's *‘hostname -f’* must match *‘facter fqdn’* for the foreman installer to succeed. Use *sysctl set-hostname* to fix this issue if it appears.  You might also need to add "127.1.0.1 hostname.domainname" in /etc/hosts as a workaround if 'hostname -f' does not resolve.
+note: one possible stumbling block is that the server's *‘hostname -f’* must match *‘facter fqdn’* for the foreman installer to succeed. Use *sysctl set-hostname* to fix this issue if it appears.  You might also need to add "192.168.x.x hostname.domainname" in /etc/hosts as a workaround if 'hostname -f' does not resolve.
 
 
 Transcript should indicate:
