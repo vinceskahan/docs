@@ -10,7 +10,7 @@ It is simplest to do a server installation with gui, but a minimum server would 
 
 * set the system up with a static address and a FQDN
 * ensure DNS resolution works ok
-* run *sysctl set-hostname* to ensure the foreman-installer would work (see note below)
+* run *hostnamectl set-hostname* to ensure the foreman-installer would work (see note below)
 * take the reboot at the end, accept terms, normal sequence applies
 
 ## Install The Foreman
@@ -24,7 +24,7 @@ yum install -y git puppet epel-release
 yum install -y foreman-installer
 ```
  
-note: one possible stumbling block is that the server's *‘hostname -f’* must match *‘facter fqdn’* for the foreman installer to succeed. Use *sysctl set-hostname* to fix this issue if it appears.
+note: one possible stumbling block is that the server's *‘hostname -f’* must match *‘facter fqdn’* for the foreman installer to succeed. Use *sysctl set-hostname* to fix this issue if it appears.  You might also need to add "127.1.0.1 hostname.domainname" in /etc/hosts as a workaround if 'hostname -f' does not resolve.
 
 
 Transcript should indicate:
