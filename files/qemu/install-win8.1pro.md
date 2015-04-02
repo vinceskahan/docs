@@ -19,6 +19,6 @@ In this case we specify br0 so the VM will appear on the LAN, set the ram to 4G 
 Be sure to 'su' to get a root shell first...
 
     virt-install --network bridge=br0 --ram=4096 \
-       --disk pool=libvirt-images,size=30 \
+       --disk pool=libvirt-images,format=img,size=30 \
        --name win8 --cdrom=/iso/win8.1pro.iso
     

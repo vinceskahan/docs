@@ -18,7 +18,7 @@ note: be aware that selinux might get in your way if you create the pool in a ne
     virt-install \
        --network bridge:virbr0  \
        --ram=1024  --vcpus=1  \
-       --disk pool=libvirt-images,size=10 \
+       --disk pool=libvirt-images,format=img,size=10 \
        --graphics none  \
        --initrd-inject=/var/www/html/ks.cfg  \
        --extra-args="console=tty0 console=ttyS0,115200 ks=file:/ks.cfg"  \

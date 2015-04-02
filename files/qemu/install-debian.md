@@ -5,7 +5,7 @@ This builds a minimal debian VM using a local copy of the netinst image, attache
 ```
 virt-install --accelerate --hvm \
   --cdrom /iso/debian-7.8.0-amd64-netinst.iso --name debian \
-  --ram 1024 --disk pool=libvirt-images,size=10 \
+  --ram 1024 --disk pool=libvirt-images,format=img,size=10 \
   --network bridge:br0 --vnc
 ```
 

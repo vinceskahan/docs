@@ -20,7 +20,7 @@ Create a 10GB disk, 1GB ram, one-cpu VM attached to the host-only virbr0  networ
     virt-install \
        --network bridge:virbr0  \
        --ram=1024  --vcpus=1  \
-       --disk pool=libvirt-images,size=10 \
+       --disk pool=libvirt-images,format=img,size=10 \
        --graphics none  \
        --initrd-inject=/var/www/html/ks.cfg  \
        --extra-args="console=tty0 console=ttyS0,115200 ks=file:/ks.cfg"  \
@@ -52,7 +52,20 @@ If your host networking is not set up correctly, the installation can seem to ha
     text
     # Partition clearing information
     clearpart --all --initlabel --drives=vda
+    #
+    ## ---- automatically partition ----
+    ## (after /boot and swap, / and /home will essentially split the disk)
+    #
     autopart --type=lvm
+    #
+    ## ---- or manually partition ----
+    #     part /boot --fstype=ext4 --size=500
+    #     part pv.01        --grow --size=1
+    #     volgroup vg1 pv.01
+    #     logvol /           --fstype=xfs --name=lv_root   --vgname=vg1 --grow --size=1024 --maxsize=10240
+    #     logvol swap                     --name=lv_swap   --vgname=vg1 --grow --size=6144 --maxsize=6144
+    #     logvol /opt/puppet --fstype=xfs --name=lv_puppet --vgname=vg1 --grow --size=1024 --maxsize=51200
+    #
     # System bootloader configuration
     bootloader --location=mbr --boot-drive=vda
     # Network information
@@ -69,3 +82,6 @@ If your host networking is not set up correctly, the installation can seem to ha
     # for diagnostics
     tcpdump
     %end
+
+
+
