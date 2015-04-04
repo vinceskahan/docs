@@ -13,6 +13,7 @@ This repo contains some howtos and technical notes that either document things t
 * [puppet](files/puppet/)
 * [qemu](files/qemu/)
 * [systemd](files/systemd/)
+* [virtinstall](files/virtinstall/)
 * [vnc](files/vnc/)
 * [weewx](files/weewx/)
 * [wordpress](files/wordpress/)
