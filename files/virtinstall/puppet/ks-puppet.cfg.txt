@@ -1,0 +1,78 @@
+# bare minimum hands-off ks.cfg
+
+# autoreboot at the end
+reboot
+
+# suppress the eula 'hit return'
+eula --accept
+
+# set a root password we can remember
+rootpw --plaintext root
+
+# suppress the timezone prompt
+# disable ntp for now
+timezone America/Los_Angeles --isUtc --nontp
+
+# suppress the user prompt
+user --groups=wheel --name=vince --password=vince
+
+# Use CDROM installation media
+cdrom
+# Use text mode install
+text
+
+# Partition clearing information
+clearpart --all --initlabel --drives=vda
+
+#--- automatic partitioning
+# autopart --type=lvm
+
+#--- or manual partitioning in a lvm
+# swap recommended, boot 500M (ext3), / 10G, home 5G, /opt/puppet rest
+part /boot --fstype=ext4 --size=500
+part pv.01        --grow --size=1
+volgroup vg1 pv.01
+logvol /           --fstype=xfs --name=lv_root   --vgname=vg1 --grow --size=1024 --maxsize=10240
+logvol swap                     --name=lv_swap   --vgname=vg1 --grow --size=6144 --maxsize=6144
+logvol /opt/puppet --fstype=xfs --name=lv_puppet --vgname=vg1 --grow --size=1024 --maxsize=51200
+
+# System bootloader configuration
+bootloader --location=mbr --boot-drive=vda
+
+# Network information
+#-- dhcp
+# network  --bootproto=dhcp --device=eth0 --onboot=off --ipv6=auto
+
+#-- static
+network  --bootproto=static --device=eth0 --onboot=off --ipv6=auto --ip=192.168.0.178  --netmask=255.255.255.0 --gateway=192.168.0.1 --nameserver=192.168.0.138
+
+network  --hostname=puppet.local
+
+repo --name="Puppet Labs Products"     --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
+repo --name="Puppet Labs Dependencies" --baseurl=http://yum.puppetlabs.com/el/7/dependencies/x86_64
+
+%packages
+@core
+
+# a few network utils we need
+net-tools
+tcpdump
+bind-utils
+
+# for puppet
+git
+
+%end
+
+%post
+
+### Install our SSH key
+mkdir -m0700 /root/.ssh/
+cat <<EOF >/root/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVmQ5REEZMnCfznsDgE0ak+oiv1e9sdH6xxGvFhkTlcT7AJonluxPrtskU8rc2Jhz6MpL6w84xXF8qGswG75V/QYA5qUdFRTtwIur0CgMkDbCW+OP2v65DX3pwPYnw/Z5Wzl5jJ9gtIsX0HH9W4KKm5030xxaMFkYBrU67uXATnXeiPUtwO7XjIgnuTotXtdZkLmUi9Pm151SglvrWFKRl9zSgp0K10HKK+pDhKewVeJjAp6gRO7kkp8U4by2+pVeXJlSgx9qevsZ/16DeAizYIas7aTz+X61ICRqS0EARpHlm2LXxU4voc4WgIPxKl2MLzDJupqa7IAvbO9WVZFwR vince@VinceAir.local
+EOF
+chmod 0600 /root/.ssh/authorized_keys
+restorecon -R /root/.ssh/
+
+%end
+
