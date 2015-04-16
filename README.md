@@ -17,3 +17,4 @@ This repo contains some howtos and technical notes that either document things t
 * [vnc](files/vnc/)
 * [weewx](files/weewx/)
 * [wordpress](files/wordpress/)
+* [zoneminder](files/zoneminder/)
