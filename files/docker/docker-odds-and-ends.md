@@ -32,4 +32,49 @@ I can never remember the docker syntax, here’s a quick-reference
      similar to 'docker rm' just use 'docker 'rmi'
 ## (Mac/Windows) – stop boot2docker
 
-boot2docker stop
+    boot2docker stop
+
+# docker RUN vs CMD
+
+    'run' is executed when you 'docker build'
+    'cmd' is executed with you 'docker run'
+
+# delete all stopped containers
+
+`docker rm $(docker ps -a -q)`
+
+# name a versioned container
+	alias dl=`docker ps -l -q`
+	docker commit `dl` mynamehere
+
+# graph dependencies 
+
+```
+# generate image dependency diagram via imagemagick
+docker images -viz | dot -Tpng -o docker.png
+
+# start a http server
+python -m SimpleHTTPServer
+
+# view it
+bring up http://foo:8000/docker.png
+
+```
+
+# where does it store everything
+```
+/var/lib/docker
+```
+
+# don't run a daemon in your Dockerfile
+RUN is for things that affect the filesystem, not to start daemons
+
+# letting containers talk to each other
+```
+# run a container and name it
+$ docker run -d -name foo fooimage
+
+# run another and link it to the first using an alias
+$ docker run -link /foo:whatever foo2image env
+(prints out the ports etc)
+```
