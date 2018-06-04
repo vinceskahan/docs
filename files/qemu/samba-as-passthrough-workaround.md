@@ -14,7 +14,7 @@ Nothing too special here, install the rpms, set the firewall, enable and start t
     systemctl start smb.service
     systemctl start nmb.service
 
-###Edit /etc/samba/smb.conf
+### Edit /etc/samba/smb.conf
 
 Simplest configuration to create for a Windows client is to ensure that your workgroup on the client side matches the workgroup on the samba server.  This example just shares the /media/cdrom directory that we will mount the DVD to as needed.
 
@@ -35,7 +35,7 @@ Simplest configuration to create for a Windows client is to ensure that your wor
        read only = yes
        browsable = yes
 
-##Test your configuration
+## Test your configuration
 
 testparm should return the following:
 
@@ -60,7 +60,7 @@ testparm should return the following:
     	path = /media/cdrom
     	guest ok = Yes
 
-##Configure selinux
+## Configure selinux
 
 Default selinux policy will block the client from seeing anything you export unless you configure selinux to permit a more traditional access control mechanism simply according to the settings in /etc/samba/smb.conf
 
@@ -75,11 +75,11 @@ This is explained further in the [RHEL Documentation](https://access.redhat.com/
     type to be exported through Samba. Permissions in /etc/samba/smb.conf and
     Linux permissions must be configured to allow write access.
     
-##navigate to the share on the client
+## navigate to the share on the client
 
 At this point, you should be able to navigate to the Samba shared DVD contents on the client VM and install your software to the client.
 
-##unmounting the DVD from the server
+## unmounting the DVD from the server
 
 Windows seems to have some keepalives set, so to unmount the DVD from the server, you might need to manually detach from it on the client side. Knowing a little old-1985-vintage MS-DOS command-line helps.
 
