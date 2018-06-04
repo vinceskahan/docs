@@ -32,7 +32,7 @@ The slick thing here is the *--initrd-inject* to insert the ks.cfg file into the
 note: 
 If your host networking is not set up correctly, the installation can seem to hang especially if your VM is set to DHCP. Definitely follow the excellent Dell [howto (pdf)](http://linux.dell.com/files/whitepapers/KVM_Virtualization_in_RHEL_7_Made_Easy.pdf) document for how to set up your ethernet and bridge configurations on centos.
 
-#minimal centos7 ks.cfg
+# minimal centos7 ks.cfg
     
     # autoreboot at the end
     reboot
