@@ -4,19 +4,19 @@
 
 [(see vmware KB link)](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1038043)
 
-###get a list of all VMs
+### get a list of all VMs
 `vim-cmd vmsvc/getallvms`
 
-###power it up
+### power it up
 `vim-cmd vmsvc/power.on ID_NUMBER`
 
-###suspend it
+### suspend it
 `vim-cmd vmsvc/power.suspend ID_NUMBER`
 
-###resume it
+### resume it
 `vim-cmd vmsvc/power.suspend_resume ID_NUMBER`
 
-###there are 'many' vmsvc commands you can run:
+### there are 'many' vmsvc commands you can run:
 
 ```
 ~ # vim-cmd vmsvc
