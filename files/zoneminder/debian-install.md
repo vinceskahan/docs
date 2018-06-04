@@ -3,6 +3,7 @@
 
 This is a quick howto for installing and configuring zoneminder on top of a minimal debian image
 
+(note - this is old, and restoring this reference db backup will 'likely' not work unattended on a modern version of the database software.   My recollection is that the restore fails unattended.  Manually running the steps did the right thing with prompting when last tried (circa 2016)).
 
  
 ## update the apt cache
