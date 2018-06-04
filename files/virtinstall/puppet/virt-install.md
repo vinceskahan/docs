@@ -5,7 +5,7 @@
  * one virtual cpu
  * use the 'spinning' virt-pool, disk in raw format, 100GB
  * no graphics
- * inject a kicstart config into the top of the initrd
+ * inject a kickstart config into the top of the initrd
  * enable serial console, and kickstart off that (internal) toplevel config
  * from a iso image mounted locally on the host
  * and specify the qemu-kvm domain name
