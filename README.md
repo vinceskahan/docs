@@ -8,6 +8,7 @@ This repo contains some howtos and technical notes that either document things t
 * [esxi](files/esxi/)
 * [foreman](files/foreman/)
 * [git](files/git)
+* [github](files/github)
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
 * [nuc](files/nuc/)
