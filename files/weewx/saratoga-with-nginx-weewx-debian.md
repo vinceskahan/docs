@@ -1,10 +1,10 @@
-#install saratoga templates with nginx and weewx
+# install saratoga templates with nginx and weewx
 
 The php-based saratoga templates have a lot of corequisites.  This documents how to bring them up quickly using nginx as the webserver on a debian system.
 
 ---
 
-##install php5-fpm support for nginx
+## install php5-fpm support for nginx
 
 install the packages
 
@@ -45,11 +45,11 @@ verify php is installed and executing correctly
 
 ---
 
-##install saratoga
+## install saratoga
 
 This section is a streamlined version of the somewhat cryptic [saratoga instructions](http://saratoga-weather.org/wxtemplates/install.php), assuming a default installation using USA base templates. See the saratoga instructions link for more options.
 
-###download the base files, Weather Display plugin, and default icons
+### download the base files, Weather Display plugin, and default icons
 
     cd /tmp
     wget http://saratoga-weather.org/wxtemplates/Base-USA.zip
@@ -64,7 +64,7 @@ install them:
     at this point, you should be able to open http://localhost/saratoga/wxindex.php and see the default saratoga pages
 
 ---
-##customize your site
+## customize your site
 
     edit your Settings.php to taste
     edit your wxindex.php to taste
@@ -79,7 +79,7 @@ And continue to tuning your site to your desired look and feel !!!
     set SITE['variable] values to point to my city, lat/lon, NWSforecasts, noaazone, noaaradar, WUreguin, GR3radar, 
     set SITE['NOAAdir'] to point to the weewx NOAA tree
 
-###Settings-weather.php
+### Settings-weather.php
 
     set HistoryStartYear
     set HistoryFilesDir to point to my weewx NOAA tree
@@ -87,7 +87,7 @@ And continue to tuning your site to your desired look and feel !!!
     set SOLAR=false
     set WXsoftwareURL=http://www.weewx.com
 
-###WD-trends-inc.php
+### WD-trends-inc.php
 
 I do not have UV nor solar sensors, so I set their variables to false
 
@@ -96,7 +96,7 @@ I do not have UV nor solar sensors, so I set their variables to false
 I comment out the WXSIM line to not have the unused menu appear. 
 I do not have the rather expensive WXSIM software installed here.
 
-###menubar.php
+### menubar.php
 
 I add a 'other formats' menu and a few sub-bullets
 to crosslink my saratoga site to my other skins (weewx, bootstrap, etc)
@@ -105,16 +105,16 @@ to crosslink my saratoga site to my other skins (weewx, bootstrap, etc)
 
 edit in the correct location for your site
 
-###wxabout.php
+### wxabout.php
 
 edit in whatever description of your site you'd like
 
-###wxmetar.php
+### wxmetar.php
 
 edit in the site(s) you are close to by looking the location
 up at http://saratoga-weather.org/wxtemplates/find-metar.php
 
-###wxstatus.php
+### wxstatus.php
 
 my Seagate Dockstart reports free memory strangely so I needed to patch this file to add the && ($freememory < 9888) case
 
