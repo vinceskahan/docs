@@ -1,13 +1,13 @@
-#ESXi quick reference
+# ESXi quick reference
 Capturing ESXi trivia for easy searching....
 
-##Which VMs are currently running
+## Which VMs are currently running
 
 ```
 esxcli vm process list
 ```
 
-##Force stop/kill a VM
+## Force stop/kill a VM
 
 ```
 esxcli vm process list
@@ -26,7 +26,7 @@ vim-cmd hostsvc/maintenance_mode_enter
 putting the host into maint mode when it is already there will return an error
 
 
-##Clone a VM from the command line – (see also) (see also)
+## Clone a VM from the command line – (see also) (see also)
 
 ```
 cd /vmfs/volume/vm
@@ -52,7 +52,7 @@ add the new VM to DNS
 
 add to /etc/hosts on the DNSMASQ server and reset DNSMASQ to make it take effect
 
-##ESXi versions of typical commands
+## ESXi versions of typical commands
 
 top => esxtop   ([VMware KB link](https://communities.vmware.com/docs/DOC-9279))
 
