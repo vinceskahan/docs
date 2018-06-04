@@ -2,7 +2,7 @@
 
 This repo contains some howtos and technical notes that either document things that I can never remember, or things that were (at the time) a bit painful to figure out experimentally.  Stashing them here so I don't lose them.
 
-* [ansible updating] (files/ansible-updating)
+* [ansible updating](files/ansible-updating)
 * [dnsmasq](files/dnsmasq/)
 * [docker](files/docker/)
 * [esxi](files/esxi/)
@@ -14,7 +14,7 @@ This repo contains some howtos and technical notes that either document things t
 * [puppet](files/puppet/)
 * [qemu](files/qemu/)
 * [systemd](files/systemd/)
-* [timezones] (files/timezones)
+* [timezones](files/timezones)
 * [virtinstall](files/virtinstall/)
 * [vnc](files/vnc/)
 * [weewx](files/weewx/)
