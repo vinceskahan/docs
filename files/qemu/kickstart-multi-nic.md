@@ -1,4 +1,4 @@
-#qemu-kvm kickstart a multiple-nic VM
+# qemu-kvm kickstart a multiple-nic VM
 
 Building a multiple-nic VM is straightforward, but be careful to specify the networks in the correct order so that the correct virtual interface in the VM lines up with the correct interface in the os *running* in the VM.
 
