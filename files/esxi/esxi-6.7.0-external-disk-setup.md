@@ -24,7 +24,8 @@ This is verified on 6.7.0 on a 4th generation Intel NUC
   `partedUtil getptbl /dev/disks/naa.5000000000000001`
 
 ### calculate the end of the partition
-  ```eval expr $(partedUtil getptbl /dev/disks/naa.5000000000000001 \
+  ```
+     eval expr $(partedUtil getptbl /dev/disks/naa.5000000000000001 \
         | tail -1 | awk '{print $1 " \\* " $2 " \\* " $3}') - 1
   ```
 
