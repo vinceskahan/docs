@@ -14,12 +14,14 @@ This is verified on 6.7.0 on a 4th generation Intel NUC
    chkconfig usbarbitrator --list
    chkconfig usbarbitrator off
    ```
+
 ### look for the disk
    `ls /dev/disks`
   
 ### label the disk
   in my case, the disk shows up as /dev/disks.5000000000000001 
-  `partedUtil mklabel /dev/disks/naa.5000000000000001 gpt`
+
+  ```partedUtil mklabel /dev/disks/naa.5000000000000001 gpt```
 
 ### get the partition table info
   `partedUtil getptbl /dev/disks/naa.5000000000000001`
@@ -31,7 +33,8 @@ This is verified on 6.7.0 on a 4th generation Intel NUC
   ```
 
 ### using the value returned, create a new partition table
-  in my case, the value the above command returned was 1953520064
+  in my case, the value the above command returned was 195352006
+
   ```
    partedUtil setptbl /dev/disks/naa.5000000000000001 gpt \
      "1 2048 1953520064 AA31E02A400F11DB9590000C2911D1B8 0"
