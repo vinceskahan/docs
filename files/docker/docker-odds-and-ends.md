@@ -78,3 +78,8 @@ $ docker run -d -name foo fooimage
 $ docker run -link /foo:whatever foo2image env
 (prints out the ports etc)
 ```
+
+# clean up intermediate images not used by anything
+```
+docker rmi $(docker images | grep "<none>" | awk '{print $3}')
+```	
