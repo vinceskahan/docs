@@ -3,12 +3,14 @@
 This repo contains some howtos and technical notes that either document things that I can never remember, or things that were (at the time) a bit painful to figure out experimentally.  Stashing them here so I don't lose them.
 
 * [ansible](files/ansible/)
+* [chromium-autostart](files/chromium-autostart/)
 * [dnsmasq](files/dnsmasq/)
 * [docker](files/docker/)
 * [esxi](files/esxi/)
 * [foreman](files/foreman/)
 * [git](files/git)
 * [github](files/github)
+* [ha-config](files/ha-configs/)
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
 * [nuc](files/nuc/)
