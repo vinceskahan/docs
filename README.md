@@ -4,6 +4,7 @@ This repo contains some howtos and technical notes that either document things t
 
 * [ansible](files/ansible/)
 * [chromium-autostart](files/chromium-autostart/)
+* [dhcp-static-address](files/dhcp-static-address/)
 * [dnsmasq](files/dnsmasq/)
 * [docker](files/docker/)
 * [esxi](files/esxi/)
