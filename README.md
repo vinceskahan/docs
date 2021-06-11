@@ -19,6 +19,7 @@ This repo contains some howtos and technical notes that either document things t
 * [qemu](files/qemu/)
 * [systemd](files/systemd/)
 * [timezones](files/timezones)
+* [time machine](files/timemachine)
 * [virtinstall](files/virtinstall/)
 * [vnc](files/vnc/)
 * [weewx](files/weewx/)
