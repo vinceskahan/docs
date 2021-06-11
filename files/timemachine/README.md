@@ -106,3 +106,7 @@ IMPORTANT - remember to set it back to throttled afterward !!!!
 sudo sysctl debug.lowpri_throttle_enabled=1
 ```
 
+### A better way to quicken the first backup
+
+Simply format the disk as encrypted in Disk Utility 'before' running Time Machine.   Formatting/encrypting in Disk Utility is 'very' fast especially since you're essentially encrypting all zeroes that way.
+
