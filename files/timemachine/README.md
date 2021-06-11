@@ -8,7 +8,7 @@ Initial setup of a new time machine backup disk takes seemingly forever after th
 This is a SSD that is not quite through encryption after many hours....
 
 ```
-vince@vinces-MacBook-Air:~$ diskutil cs list
+$ diskutil cs list
 CoreStorage logical volume groups (1 found)
 |
 +-- Logical Volume Group DD6A920A-899F-4DFB-9EC2-1AAD4153D89C
