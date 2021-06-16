@@ -1,5 +1,33 @@
-## downloading all your repos
 
+## Downloading all your repos via the Github CLI 'gh' command
+
+```
+# install the Github CLI 'gh' and prerequisites
+# brew install jq gh
+
+# run gh once to set up your auth
+# gh auth login
+
+# this helps as I have 2FA set and need
+# to ok this api access via my yubikey
+
+gh repo list --json name --limit 100 | jq '.[].name' | xargs -n1 gh repo clone
+
+# if you want to log out afterward
+#   gh auth logout
+
+# gh saves your config in ~/.config/gh/ including your token
+# so be sure to ensure there's no world read
+
+```
+
+
+---
+---
+---
+
+
+## older answer - doesn't with for private repos
 This excellent script came from https://stackoverflow.com/a/32833411/3285738
 which is an answer to [a question](https://stackoverflow.com/questions/19576742/how-to-clone-all-repos-at-once-from-github?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) regarding how to do this exact task.
 
