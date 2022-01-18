@@ -12,6 +12,7 @@ This repo contains some howtos and technical notes that either document things t
 * [git](files/git)
 * [github](files/github)
 * [ha-config](files/ha-configs/)
+* [ha-installation](files/ha-installation/)
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
 * [nuc](files/nuc/)
