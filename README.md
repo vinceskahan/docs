@@ -15,6 +15,7 @@ This repo contains some howtos and technical notes that either document things t
 * [ha-installation](files/ha-installation/)
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
+* [lightsail-ssh](files/lightsail-ssh/)
 * [nuc](files/nuc/)
 * [puppet](files/puppet/)
 * [qemu](files/qemu/)
