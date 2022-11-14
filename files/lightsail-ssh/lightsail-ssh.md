@@ -12,6 +12,9 @@ Set the following as your accepted key types in /etc/ssh/sshd_config and restart
 # ref https://repost.aws/questions/QUro1hmox0SmSG-NJknvJnPQ/lightsail-ssh-rdp-browser-log-in-failed-client-unauthorized-769
 
 PubkeyAcceptedKeyTypes +ssh-rsa,ssh-rsa-cert-v01@openssh.com,ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
+
+# you might also need
+PubkeyAcceptedAlgorithms +ssh-rsa
 ```
 
 WARNING - don't lock yourself out.  It is very easy to typo this addition and block 'all' access to your VM.
