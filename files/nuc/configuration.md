@@ -3,7 +3,9 @@
 This has been the primary Linux box for several years, running Ubuntu 2020 LTS and a number of docker instances.  Also used to spin up vagrant/VirtualBox VMs for quick testing and investigations.
 
 ### Configuration
+
 | Cost | Item | Notes
+| -----  |  ----- | -----
 | $ 299 | Intel NUC 8 Mainstream Kit (NUC83BEK) | (small case)
 | $ 77 | Samsung 970 EVO 250GB - NVMe PCle M.2 2280 SSD (MZ-V7E250BW) | (ssd)
 | $ 72 | Crucial 8GB Kit (4GBx2) DDR4 2400 MT/S (PC4-19200) | (8 gb ram)
