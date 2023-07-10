@@ -1,6 +1,6 @@
 
 ## i3 NUC Purchased 1/16/2019
-This has been the primary Linux box for several years, running Ubuntu 2020 LTS and a number of docker instances.  Also used to spin up vagrant/VirtualBox VMs for quick testing and investigations.
+This has been the primary Linux box for several years, running Ubuntu 2018 LTS and a number of docker instances.  Also used to spin up vagrant/VirtualBox VMs for quick testing and investigations.
 
 ### Configuration
 
