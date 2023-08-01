@@ -13,6 +13,7 @@ This repo contains some howtos and technical notes that either document things t
 * [github](files/github)
 * [ha-config](files/ha-configs/)
 * [ha-installation](files/ha-installation/)
+* [ipv6](files/ipv6/)
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
 * [lightsail-ssh](files/lightsail-ssh/)
