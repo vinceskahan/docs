@@ -18,6 +18,9 @@ ssh into the opnsense box, run "ping6 google.com" and see if it works
 
 ### Try again to 'ping6 google.com'
 
+----
+----
+
 ## Enable Lightsail ipv6
 
 ### Enable it in the VM
@@ -33,7 +36,44 @@ Likely add a ICMP ping rule to the ipv6 ruleset to enable ping6 to work
 Add a AAAA record for your how so DNS lookups work
 
 
+----
+----
+
+## Diffs in opnsense configs with ipv4-only vs. ipv6-enabled
 
 
-
-
+```
+--- ipv4-lan-config-OPNsense.localdomain-20230801091913.xml	2023-08-01 09:19:16
++++ ipv6-lan-enabled-config-OPNsense.localdomain-20230801091347.xml	2023-08-01 09:13:55
+@@ -388,6 +388,10 @@
+       <spoofmac/>
+       <ipaddr>192.168.1.1</ipaddr>
+       <subnet>24</subnet>
++      <ipaddrv6>track6</ipaddrv6>
++      <track6-interface>wan</track6-interface>
++      <track6-prefix-id>0</track6-prefix-id>
++      <dhcpd6track6allowoverride>1</dhcpd6track6allowoverride>
+     </lan>
+     <lo0>
+       <internal_dynamic>1</internal_dynamic>
+@@ -1100,8 +1104,8 @@
+   </widgets>
+   <revision>
+     <username>vince@192.168.1.51</username>
+-    <time>1690906728.8854</time>
+-    <description>/interfaces.php made changes</description>
++    <time>1690906266.5845</time>
++    <description>/services_router_advertisements.php made changes</description>
+   </revision>
+   <OPNsense>
+     <Firewall>
+@@ -1614,7 +1618,7 @@
+   </wireless>
+   <dhcpdv6>
+     <lan>
+-      <ramode>disabled</ramode>
++      <ramode>assist</ramode>
+       <rapriority>medium</rapriority>
+       <ramininterval>200</ramininterval>
+       <ramaxinterval>600</ramaxinterval>
+```
