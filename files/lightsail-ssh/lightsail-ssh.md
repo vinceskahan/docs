@@ -19,4 +19,4 @@ PubkeyAcceptedAlgorithms +ssh-rsa
 
 WARNING - don't lock yourself out.  It is very easy to typo this addition and block 'all' access to your VM.
 
-SUGGESTION - work off a snapshotted clone until you figure it out.  For me my original Lightsail instance 'did' permit my normal ssh access in, but the console access didn't work.   Adding the line above and restarting sshd fixed that and both paths in work now.  Have a failsafe window open and keep that window logged in while working the issue.  There's really no way in both paths are broken.
+SUGGESTION - work off a snapshotted clone until you figure it out.  For me my original Lightsail instance 'did' permit my normal ssh access in, but the console access didn't work.   Adding the line above and restarting sshd fixed that and both paths in work now.  Have a failsafe window open and keep that window logged in while working the issue.  There's really no way in if both paths are broken.
