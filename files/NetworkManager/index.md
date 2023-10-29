@@ -2,7 +2,9 @@
 The debian-12 based raspi uses NetworkManager so the way of seeding the network configuration for wifi is different.   A two step one-time command is needed to set up the box.
 
 
-<!-- credits https://forums.raspberrypi.com/viewtopic.php?p=2150305#p2148962 -->
+## for network manager manually configure wifi
+
+credits:  https://forums.raspberrypi.com/viewtopic.php?p=2150305#p2148962 
 
 ```
 # create the wpa stanza with the encrypted password
