@@ -17,6 +17,7 @@ This repo contains some howtos and technical notes that either document things t
 * [kickstart](files/kickstart/)
 * [lvm](files/lvm/)
 * [lightsail-ssh](files/lightsail-ssh/)
+* [NetworkManager](files/NetworkManager/)
 * [nuc](files/nuc/)
 * [puppet](files/puppet/)
 * [qemu](files/qemu/)
