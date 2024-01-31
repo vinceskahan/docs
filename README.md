@@ -26,6 +26,7 @@ This repo contains some howtos and technical notes that either document things t
 * [time machine](files/timemachine)
 * [virtinstall](files/virtinstall/)
 * [vnc](files/vnc/)
+* [veracrypt](files/veracrypt/)
 * [weewx](files/weewx/)
 * [wordpress](files/wordpress/)
 * [zoneminder](files/zoneminder/)
