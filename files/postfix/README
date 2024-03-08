@@ -1,0 +1,5 @@
+These files are how I check my weewx raspi's outside internet-facing ip
+and email me daily if it's ok or changed.  This is because I limit ssh
+into my AWS instance to come from only my home LAN's public ip, which
+unfortunately Xfinity changes periodically.
+

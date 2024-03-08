@@ -1,0 +1,3 @@
+# check and syslog my ip, sending mail via gmail if LAN external ip changed
+44 12 * * * /home/pi/bin/logmyip.sh
+
